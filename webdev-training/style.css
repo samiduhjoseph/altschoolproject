@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Ubuntu:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --font_ubuntu: "PT Sans";
+  --font_lato: "Lato";
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font_lato);
+}
+body {
+  background-color: #2ec4b531;
+}
+.development {
+  display: grid;
+  grid-template-areas: "box1 box2";
+  grid-auto-columns: 1fr 1fr;
+  max-width: 90rem;
+  margin: 5rem auto;
+  align-content: space-around;
+}
+.development__box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: center;
+}
+.development__img {
+  width: 15%;
+}
+.development__head {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.development__text {
+  color: #737373;
+  font-size: 1.05rem;
+  max-width: 51ch;
+  line-height: 1.5;
+}
+.development__box2 {
+  border-radius: 0.375rem;
+  background: #fff;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  padding: 2.5rem;
+}
+.development__form {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "box1 box2" "box3 box4" "box5 box6";
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.form__input label {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+.form__input input {
+  border-radius: 0.125rem;
+  border: 1px solid #f0f0f0;
+  height: 3rem;
+  padding: 0 1rem;
+}
+input::placeholder {
+  text-transform: capitalize;
+  color: #737373;
+}
+.form__input select {
+  border-radius: 0.125rem;
+  border: 1px solid #f0f0f0;
+  height: 3rem;
+  padding: 0 1rem;
+  text-transform: capitalize;
+  color: #737373;
+}
+.form__input option {
+  text-transform: capitalize;
+  color: #737373;
+}
+.development__form2 {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form__btn {
+  height: 3.2rem;
+  background-color: #2ec4b6;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 600;
+}
+.form__register {
+  text-align: center;
+  font-size: 0.875rem;
+}
+.form__register a {
+  color: #2ec4b6;
+}
+@media (max-width: 1450px) {
+  .development {
+    margin: 4rem 1rem;
+  }
+}
+@media (max-width: 1000px) {
+  .development {
+    grid-template-areas: "box1" "box2";
+    gap: 2rem;
+  }
+  .development__text {
+    max-width: max-content;
+  }
+}
+@media (max-width: 550px) {
+  .development__box2 {
+    padding: 2rem 1rem;
+  }
+  .development__form {
+    grid-template-areas: "box1" "box2" "box3" "box4" "box5" "box6";
+  }
+}
